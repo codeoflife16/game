@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Making</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .dashboard {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .dashboard h2 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            height: 100px;
+        }
+        .button {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Decision Making</h1>
+    </header>
+    <div class="container">
+        <section class="dashboard">
+            <h2>Make a Decision</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="submission">Select Submission:</label>
+                    <select id="submission" name="submission" required>
+                        <option value="1033">Submission #1033- Priyanka Kundu</option>
+                    <option value="1904">Submission #1904- Sandipan Dey</option>
+                    <option value="12347">Submission #12347 - Jay Vishwakumar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="decision">Decision:</label>
+                    <select id="decision" name="decision" required>
+                        <option value="approve">Approve Submission</option>
+                        <option value="reject">Reject Submission</option>
+                        <option value="request_info">Request Additional Information</option>
+                    </select>
+                </div>
+                <div class="form-group" id="additional-info" style="display: none;">
+                    <label for="info">Additional Information Request:</label>
+                    <textarea id="info" name="info" placeholder="Enter details for additional information request..."></textarea>
+                </div>
+                <input type="submit" value="Submit Decision" class="button">
+            </form>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('decision').addEventListener('change', function() {
+            var additionalInfo = document.getElementById('additional-info');
+            if (this.value === 'request_info') {
+                additionalInfo.style.display = 'block';
+            } else {
+                additionalInfo.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

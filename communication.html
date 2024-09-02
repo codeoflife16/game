@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication & Audit Reporting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .dashboard {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .dashboard h2 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group input[type="submit"] {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        .log-action, .generate-report {
+            margin: 20px 0;
+        }
+        .log-action textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .generate-report a {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .generate-report a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Communication & Audit Reporting</h1>
+    </header>
+    <div class="container">
+        <section class="dashboard">
+            <h2>Notify User</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="notification-method">Select Notification Method:</label>
+                    <select id="notification-method" name="notification-method" required>
+                        <option value="email">Email</option>
+                        <option value="sms">SMS</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="user-contact">User Contact:</label>
+                    <input type="text" id="user-contact" name="user-contact" placeholder="Enter email or phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Notification Message:</label>
+                    <input type="text" id="message" name="message" placeholder="Enter the message to be sent" required>
+                </div>
+                <input type="submit" value="Send Notification">
+            </form>
+        </section>
+
+        <section class="dashboard">
+            <div class="log-action">
+                <h2>Log Action</h2>
+                <textarea placeholder="Log details of the action here..."></textarea>
+                <input type="submit" value="Save Log">
+            </div>
+
+            <div class="generate-report">
+                <h2>Generate Report</h2>
+                <a href="#">Generate Audit Report</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

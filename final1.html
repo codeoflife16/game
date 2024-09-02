@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .button {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <div class="container">
+        <section id="access-dashboard">
+            <h2>Access the Dashboard</h2>
+            <p>Admin logs in and reviews the dashboard for pending verifications.</p>
+ <p><a href="audit.html" class ="button">Login</a></p>
+           
+        </section>
+
+        <section id="review-submission">
+            <h2>Review a Submission</h2>
+            <p>Admin selects a pending submission, views the uploaded documents, and checks the details.</p>
+ <p><a href="review.html" class ="button">view Submissions</a></p>
+
+                    </section>
+
+        <section id="verification-process">
+            <h2>Verification Process</h2>
+            <p>Admin verifies the authenticity and completeness of the documents, using tools like comparison templates and notes.</p>
+          
+ <p><a href="verify.html" class ="button">Start Verification</a></p>
+
+        </section>
+
+        <section id="decision">
+            <h2>Decision</h2>
+            <p>Admin approves or rejects the submission or requests additional information.</p>
+             <p><a href="decision.html" class ="button">Make Decision</a></p>
+        </section>
+
+        <section id="communication">
+            <h2>Communication</h2>
+            <p>User is automatically notified of the decision via email or SMS.</p>
+          <p><a href="communication.html" class ="button">Send Notification S</a></p>
+
+        </section>
+
+        <section id="audit-reporting">
+            <h2>Audit and Reporting</h2>
+            <p>Admin logs the action, and the system updates the audit trail and generates reports as needed.</p>
+            <a href="#" class="button">Generate Report</a>
+        </section>
+    </div>
+</body>
+</html>
+

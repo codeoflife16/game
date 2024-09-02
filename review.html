@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review a Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .dashboard {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .submission-details, .uploaded-documents {
+            margin-bottom: 20px;
+        }
+        .submission-details h3, .uploaded-documents h3 {
+            color: #333;
+        }
+        .uploaded-documents ul {
+            list-style: none;
+            padding: 0;
+        }
+        .uploaded-documents ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .button {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Review a Submission</h1>
+    </header>
+    <div class="container">
+        <section class="dashboard">
+            <h2>Select a Submission</h2>
+            <form action="#" method="get">
+                <label for="submission">Choose Submission:</label>
+                <select id="submission" name="submission" required>
+                    <option value="1033">Submission #1033- Priyanka Kundu</option>
+                    <option value="1904">Submission #1904- Sandipan Dey</option>
+                    <option value="12347">Submission #12347 - Jay Vishwakumar</option>
+                </select>
+                <input type="submit" value="View Details" class="button">
+            </form>
+        </section>
+
+        <section class="dashboard">
+            <div class="submission-details">
+                <h3>Submission Details</h3>
+                <p><strong>ID:</strong> 1033</p>
+                <p><strong>Name:</strong>Priyanka Kundu</p>
+                <p><strong>Date of Submission:</strong> 2024-09-03</p>
+                <p><strong>Status:</strong> Pending</p>
+            </div>
+
+            <div class="uploaded-documents">
+                <h3>Uploaded Documents</h3>
+                <ul>
+                    <li><a href="#">Document 1 - ID Proof.pdf</a></li>
+                    <li><a href="#">Document 2 - Address Proof.pdf</a></li>
+                    <li><a href="#">Document 3 - Academic Records.pdf</a></li>
+                </ul>
+            </div>
+
+            <a href="#" class="button">Approve Submission</a>
+            <a href="#" class="button">Reject Submission</a>
+            <a href="#" class="button">Request More Information</a>
+        </section>
+    </div>
+</body>
+</html>
